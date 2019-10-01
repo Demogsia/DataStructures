@@ -4,6 +4,31 @@
 void switchNumbers(int, int);
 void siralaArtan(int[], int);
 void siralaAzalan(int[], int);
+
+void siralaArtan(int x[], int m){
+	int i, j, k, temp;
+	for ( i = (m-1); i>=0; i--){
+		for ( j = 0;j<i; j++ ){
+			if(x[j] > x[j+1]){
+				temp = x[j];
+				x[j] = x[j+1];
+				x[j+1] = temp;
+			}
+		}
+	}
+}
+void siralaAzalan(int x[], int m){
+	int i, j, k, temp;
+	for ( i = (m-1); i>=0; i--){
+		for ( j = 0;j<i; j++ ){
+			if(x[j] > x[j+1]){
+				temp = x[j];
+				x[j] = x[j+1];
+				x[j+1] = temp;
+			}
+		}
+	}
+}
 int main(){
 	int m, n, i, j, k;
 	
@@ -20,28 +45,11 @@ int main(){
 	for(i = 0; i<n; i++){
 		scanf("%d", &b[i]);
 	}
-	void switchNumbers(int x, int y) {
-		int temp;
-		temp = x;
-		x = y;
-		y = temp;
-	}
-	void siralaArtan(int x[], int m){
-		int i, j, k;
-		for ( i = (m-1); i>=0; i--){
-			for ( j = 0;j<i; j++ ){
-				if(x[j] < x[j+1]){
-					switchNumbers(x[j], x[j+1]);
-				}
-			}
-		}
-	}
-	
 	siralaArtan(a, m);
-	puts(a);
-	/*for (i = 0; i<m; i++){
-		printf("%c ", a[i]);
-	}*/
+	
+	for (i = 0; i<m; i++){
+		printf("%d ", a[i]);
+	}
 	
 	getchar();
 	return 0;
