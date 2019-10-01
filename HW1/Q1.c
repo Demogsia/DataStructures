@@ -21,7 +21,7 @@ void siralaAzalan(int x[], int m){
 	int i, j, k, temp;
 	for ( i = (m-1); i>=0; i--){
 		for ( j = 0;j<i; j++ ){
-			if(x[j] > x[j+1]){
+			if(x[j] < x[j+1]){
 				temp = x[j];
 				x[j] = x[j+1];
 				x[j+1] = temp;
@@ -45,11 +45,32 @@ int main(){
 	for(i = 0; i<n; i++){
 		scanf("%d", &b[i]);
 	}
-	siralaArtan(a, m);
+	printf("İlk dizi(Sıralanmamış):\n");
+	for (i = 0; i<m; i++){printf("%d ", a[i]);}printf("\n");
+	printf("İkinci dizi(Sıralanmamış):\n");
+	for (i = 0; i<m; i++){printf("%d ", b[i]);}printf("\n");
 	
-	for (i = 0; i<m; i++){
-		printf("%d ", a[i]);
+	siralaArtan(a, m);
+	siralaAzalan(b,n);
+	
+	printf("İlk dizi(Sıralanmış):\n");
+	for (i = 0; i<m; i++){printf("%d ", a[i]);}printf("\n");
+	printf("İkinci dizi(Sıralanmış):\n");
+	for (i = 0; i<m; i++){printf("%d ", b[i]);}printf("\n");
+	
+	for (i = 0; i<(m+n); i++){
+		if (i < m){
+			c[i] = a[i];
+		}
+		else{
+			c[i] = b[i%m];
+		}
 	}
+	printf("Üçüncü dizi(Sıralanmamış):\n");
+	for (i = 0; i<m+n; i++){printf("%d ", c[i]);}printf("\n");
+	siralaArtan(c, (m+n));
+	printf("Üçüncü dizi(Sıralanmış):\n");
+	for (i = 0; i<m+n; i++){printf("%d ", c[i]);}printf("\n");
 	
 	getchar();
 	return 0;
