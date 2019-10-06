@@ -1,8 +1,9 @@
-/*HASAN EFE ÖZKAVCI - 090130328*/
+/*HASAN EFE OZKAVCI - 090130328*/
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <conio.h>
 int main(){
     int i,j,k,n,m, l;
     printf("Ilk dizinin eleman sayisini giriniz.\n");scanf("%d", &n);
@@ -19,22 +20,22 @@ int main(){
     bool sameSwitch = 1;
     while ( i <= (n-m) ) {
                 sameSwitch = 1;
-                l = i;printf("l = %d oldu\n", l);
+                l = i;
                 for ( j = 0; j < m; j++) {
                     if ( aranacakDizi[j] != anaDizi[i] ){
                          sameSwitch = 0;
-                         printf("If'e girildi.\n");
+                         
                          }
-                    l++;printf("l = %d'ye artirildi\n", l);
+                    l++;
                     i++;
                 }
                 i = i-m;
                 if(sameSwitch == 1){
                               basariliSonuclar[count] = i;
-                              count++;printf("count %d'ye artirildi.\n", count);
+                              count++;
                              
                 }
-                i++;printf("i = %d'ye artirildi\n", i);
+                i++;
     }
     printf("\n\n\nSONUCLAR:\n\n");
     printf("%s Dizisinin icerisinde %s dizisi\n", anaDizi, aranacakDizi);
@@ -42,6 +43,6 @@ int main(){
         printf("%d - %d Arasinda \n", basariliSonuclar[i], basariliSonuclar[i]+m-1);
         }
     printf("%d Adet Bulunmaktadir.", count);
-    getchar();
+    getch();
     return 0;
 }

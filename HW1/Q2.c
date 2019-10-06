@@ -1,5 +1,7 @@
+/*HASAN EFE OZKAVCI - 090130328*/
 #include <stdio.h>
 #include <math.h>
+#include <conio.h>
 void siralaAzalan(int[], int);
 void siralaAzalan(int x[], int m){
 	int i, j, k, temp;
@@ -24,7 +26,7 @@ int main(){
 	printf("Dizinin kacinci en buyuk elemanini bulmak istiyorsunuz?\n");
 	scanf("%d", &k);
 	int b[k];
-	for (int i = 0; i < k; ++i)
+	for (i = 0; i < k; ++i)
 	{
 		b[i] = a[i];
 	}
@@ -37,16 +39,17 @@ int main(){
 		}
 	}
 	printf("a dizisi:\n");
-	for (int i = 0; i < n; ++i)
+	for (i = 0; i < n; ++i)
 	{
 		printf("%d ", a[i]);
 	}
 	printf("\nb dizisi:\n");
-	for (int i = 0; i < k; ++i)
+	for (i = 0; i < k; ++i)
 	{
 		printf("%d ", b[i]);
 	}
 	printf("\na dizisinin 3. En buyuk elemani:\n");
 	printf("%d\n", b[k-1]);
+	getch();
 	return 0;
 }

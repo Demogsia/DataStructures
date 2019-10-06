@@ -1,6 +1,8 @@
+/*HASAN EFE OZKAVCI - 090130328*/
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <conio.h>
 void switchNumbers(int, int);
 void siralaArtan(int[], int);
 void siralaAzalan(int[], int);
@@ -45,17 +47,17 @@ int main(){
 	for(i = 0; i<n; i++){
 		scanf("%d", &b[i]);
 	}
-	printf("İlk dizi(Sıralanmamış):\n");
+	printf("Ilk dizi(Siralanmamis):\n");
 	for (i = 0; i<m; i++){printf("%d ", a[i]);}printf("\n");
-	printf("İkinci dizi(Sıralanmamış):\n");
+	printf("Ikinci dizi(Siralanmamis):\n");
 	for (i = 0; i<m; i++){printf("%d ", b[i]);}printf("\n");
 	
 	siralaArtan(a, m);
 	siralaAzalan(b,n);
 	
-	printf("İlk dizi(Sıralanmış):\n");
+	printf("Ilk dizi(Siralanmis):\n");
 	for (i = 0; i<m; i++){printf("%d ", a[i]);}printf("\n");
-	printf("İkinci dizi(Sıralanmış):\n");
+	printf("Ikinci dizi(Siralanmis):\n");
 	for (i = 0; i<m; i++){printf("%d ", b[i]);}printf("\n");
 	
 	for (i = 0; i<(m+n); i++){
@@ -66,12 +68,12 @@ int main(){
 			c[i] = b[i%m];
 		}
 	}
-	printf("Üçüncü dizi(Sıralanmamış):\n");
+	printf("Ucuncu dizi(Siralanmamis):\n");
 	for (i = 0; i<m+n; i++){printf("%d ", c[i]);}printf("\n");
 	siralaArtan(c, (m+n));
-	printf("Üçüncü dizi(Sıralanmış):\n");
+	printf("Ucuncu dizi(Siralanmis):\n");
 	for (i = 0; i<m+n; i++){printf("%d ", c[i]);}printf("\n");
 	
-	getchar();
+	getch();
 	return 0;
 }
