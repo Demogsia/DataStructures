@@ -46,7 +46,7 @@ int main(){
 	{
 		printf("%d ", b[i]);
 	}
-	printf("a dizisinin 3. En buyuk elemani:\n");
+	printf("\na dizisinin 3. En buyuk elemani:\n");
 	printf("%d\n", b[k-1]);
 	return 0;
 }
