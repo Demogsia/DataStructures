@@ -54,7 +54,7 @@ Listelerin ilk iþaretçileridir. */
 }
 
 /***********************************************************/
- PLNM*pol_gir()
+ PLNM* pol_gir()
     {     
           int n, i;
           
